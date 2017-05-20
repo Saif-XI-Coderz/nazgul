@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="lib/components-font-awesome/css/font-awesome.min.css">
 
+    <link rel="stylesheet" type="text/css" href="css/animation.css">
     <link rel="stylesheet" type="text/css" href="css/global.css">
     <link rel="stylesheet" type="text/css" href="css/home.css">
     <link rel="stylesheet" type="text/css" href="css/map.css">
@@ -30,21 +31,74 @@
     <button ng-click="order.open()">Order</button>
     <button ng-click="map.open()">Awesome button</button>
 
-    <div class="mashup mashup-{{ mashup.state }}">
-      <ul class="mashup-section" ng-click="mashup.focusSection(1)">
-        <li class="mashup-item mashup-item-main">
-          <label>Hello world</label>
-        </li>
-        <li class="mashup-back" ng-click="mashup.focusNone($event)">Back</li>
-      </ul><!-- 
-      --><ul class="mashup-section" ng-click="mashup.focusSection(2)">
-        <li class="mashup-item mashup-item-main">2</li>
-        <li class="mashup-back" ng-click="mashup.focusNone($event)">Back</li>
-      </ul><!-- 
-      --><ul class="mashup-section" ng-click="mashup.focusSection(3)">
-        <li class="mashup-item mashup-item-main">3</li>
-        <li class="mashup-back" ng-click="mashup.focusNone($event)">Back</li>
-      </ul>
+    <div id="wrapper">
+      <div class="mashup mashup-{{ mashup.state }}">
+        <ul class="mashup-section mt-horror" ng-click="mashup.focusSection(1)">
+          <li class="mashup-item mashup-item-main mt-werewolf">
+            <img src="img/characters/werewolf.png" />
+            <label>A bear</label>
+          </li>
+          <li class="mashup-item mashup-item-main mt-zombie">
+            <img src="img/characters/zombie.png" />
+            <label>A zombie</label>
+          </li>
+          <li class="mashup-item mt-zombie2">
+            <img src="img/items/horror/zombie2.png" />
+            <label>A zombie2</label>
+          </li>
+          <li class="mashup-item mt-daedric">
+            <img src="img/items/horror/daedric.png" />
+            <label>A daedric</label>
+          </li>
+          <li class="mashup-item mt-vampire">
+            <img src="img/items/horror/vampire.png" />
+            <label>A vampire</label>
+          </li>
+          <li class="mashup-back" ng-click="mashup.focusNone($event)">Back</li>
+        </ul><!-- 
+        --><ul class="mashup-section mt-superhero" ng-click="mashup.focusSection(2)">
+          <li class="mashup-item mt-akasha">
+            <img src="img/items/heroes/akasha.png" />
+            <label>Akasha</label>
+          </li>
+          <li class="mashup-item mt-deadpool">
+            <img src="img/items/heroes/deadpool.png" />
+            <label>Deadpool</label>
+          </li>
+          <li class="mashup-item mashup-item-main mt-heroguy">
+            <img src="img/characters/hero-guy.png" />
+            <label>A guy</label>
+          </li>
+          <li class="mashup-item mashup-item-main mt-herogirl">
+            <img src="img/characters/hero-girl.png" />
+            <label>A girl</label>
+          </li>
+          <li class="mashup-back" ng-click="mashup.focusNone($event)">Back</li>
+        </ul><!-- 
+        --><ul class="mashup-section mt-warrior" ng-click="mashup.focusSection(3)">
+          <li class="mashup-item mashup-item-main mt-knight">
+            <img src="img/characters/knight.png" />
+            <label>A knight</label>
+          </li>
+          <li class="mashup-item mashup-item-main mt-samurai">
+            <img src="img/characters/samurai.png" />
+            <label>A samurai</label>
+          </li>
+          <li class="mashup-item mt-greek">
+            <img src="img/items/warriors/greek.png" />
+            <label>A greek</label>
+          </li>
+          <li class="mashup-item mt-viking">
+            <img src="img/items/warriors/viking.png" />
+            <label>A viking</label>
+          </li>
+          <li class="mashup-item mt-pirate">
+            <img src="img/items/warriors/pirate.png" />
+            <label>A pirate</label>
+          </li>
+          <li class="mashup-back" ng-click="mashup.focusNone($event)">Back</li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>

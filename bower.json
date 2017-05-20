@@ -1,0 +1,17 @@
+{
+  "name": "nazgul",
+  "authors": [
+    "Yaswant Dowlut <yaswant.dowlut@spoonconsulting.com>"
+  ],
+  "description": "WebCup prototype",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular-animate": "^1.6.4",
+    "angular-sanitize": "^1.6.4",
+    "bootstrap": "^3.3.7",
+    "angular": "angularjs#^1.6.4",
+    "ng-bootstrap": "^1.0.1"
+  }
+}

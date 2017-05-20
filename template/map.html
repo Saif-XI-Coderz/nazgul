@@ -2,7 +2,19 @@
   <h3 class="modal-title" id="map-modal-title">Map</h3>
 </div>
 <div class="modal-body" id="map-modal-body">
-  Hello world!
+    <div class="map-container">
+        <div class='img-map'></div>
+        <div class="pulse"
+             ng-repeat="mapItem in mapItems"
+             ng-class='mapItem.imgClass'
+             ng-style="{bottom:mapItem.bottom,right:mapItem.right}"
+             data-container="body"
+             data-toggle="popover"
+             data-trigger="hover"
+             data-title="{{mapItem.title}}"
+             data-content="{{mapItem.description}}">
+        </div>
+    </div>
 </div>
 <div class="modal-footer">
   <button class="btn btn-primary" type="button" ng-click="close()">Close</button>

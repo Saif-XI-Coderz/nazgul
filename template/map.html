@@ -1,13 +1,14 @@
 <div class="modal-header">
   <h3 class="modal-title" id="map-modal-title">Map</h3>
 </div>
-<div class="modal-body" id="map-modal-body">
+<div class="modal-body no-padding" id="map-modal-body">
     <div class="map-container">
-        <div class='img-map'></div>
-        <div class="pulse"
+        <div class='img-map' ng-class="currentState"></div>
+        <div class="pulse doight"
              ng-repeat="mapItem in mapItems"
              ng-class='mapItem.imgClass'
              ng-style="{bottom:mapItem.bottom,right:mapItem.right}"
+             ng-click="this[mapItem.onClick]()"
              data-container="body"
              data-toggle="popover"
              data-trigger="hover"

@@ -1,9 +1,11 @@
 div.map-container{
     position:relative;
+    overflow: hidden;
 }
 
 div.img-map{
     content:url(../img/map.jpg);
+    transition: transform 1s ease-in-out;
     max-width: 100%;
     max-height: 100%;
 }
@@ -36,3 +38,32 @@ div.img-map-item{
         drop-shadow(0 0 6px #B6FF00)
     }
 }
+
+.doight{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.zoom-in-super-hero{
+    transform: scale(2);
+    transform-origin: 54% top;
+}
+
+.zoom-in-warriors{
+    transform: scale(2);
+    transform-origin: 3% 90%;
+}
+
+.zoom-in-horror{
+    transform: scale(2);
+    transform-origin: 100% 100%;
+}
+
+/*.zoom-initial{
+    transform: scale(0.2499);
+    transform-origin: 0 0;
+}*/

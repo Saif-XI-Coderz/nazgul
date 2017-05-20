@@ -27,8 +27,23 @@ angular.module('al', ['ngAnimate', 'ngSanitize', 'ui.bootstrap'])
     })
   }
 
+  /* Mashup */
+  var mashup = {}
+
+  mashup.state = 'collapsed';
+
+  mashup.focusSection = function(sectionNumber) {
+    mashup.state = 'expanded-' + sectionNumber;
+  }
+
+  mashup.focusNone = function(e) {
+    e.stopPropagation();
+    mashup.state = 'collapsed';
+  }
+
   $scope.order = order;
   $scope.map = map;
+  $scope.mashup = mashup;
 })
 
 .run(function() {

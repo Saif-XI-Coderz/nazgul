@@ -1,5 +1,7 @@
 angular.module('al')
 
-.controller('mapCtrl', function($scope) {
-	
+.controller('MapCtrl', function($scope, $uibModalInstance) {
+  $scope.close = function() {
+    $uibModalInstance.dismiss('cancel');
+  }
 })

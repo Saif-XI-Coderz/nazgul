@@ -1,5 +1,7 @@
 angular.module('al')
 
-.controller('orderCtrl', function($scope) {
-	
+.controller('OrderCtrl', function($scope, $uibModalInstance) {
+  $scope.close = function() {
+    $uibModalInstance.dismiss('cancel');
+  }
 })

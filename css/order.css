@@ -1,11 +1,11 @@
-.opaque {
+.order-modal .opaque {
     opacity:1;
 }
 
-.opaque-disabled {
+.order-modal .opaque-disabled {
     opacity:0.5;
 }
 
-img {
+.order-modal img {
     opacity:0.5;
 }

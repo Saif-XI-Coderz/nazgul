@@ -1,16 +1,26 @@
-body {
-	background: #000;
-	color: #FFF;
-	overflow: scroll;
+body,
+body.modal-open {
+  background: #000;
+  color: #FFF;
+  overflow: scroll;
 }
 
 #wrapper {
-	width: 70%;
-	margin: 0 auto;
+  width: 70%;
+  margin: 0 auto;
 }
 
-.modal-header,
-.modal-body,
+.modal-content {
+  background: rgba(14, 37, 68, 0.8);
+}
+
+.modal-content input[type=text],
+.modal-content input[type=tel],
+.modal-content input[type=date],
+.modal-content input[type=number] {
+  color: #000;
+}
+
 .modal-footer {
-	color: #000;
+  border-style: none;
 }

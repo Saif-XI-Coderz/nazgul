@@ -4,7 +4,7 @@
 <div class="modal-body order-modal" id="order-modal-body">
   
     <div class="container-fluid">
-        
+        <hr>
         <div class="row">
             <div class="col-xs-1"><label for="name">Name</label></div>
             <div class="col-xs-1"><input id="name" type="text"></div>
@@ -19,15 +19,16 @@
             <div class="col-xs-1"><label for="mail">E-mail</label></div>
             <div class="col-xs-1"><input id="mail" type="email"></div>
         </div>
-        <br> 
-        <div class="row"><div class="col-xs-12">Date for which to reserve tickets</div></div>
+        <hr>
+        <div class="row"><div class="col-xs-12"><strong>Date for which to reserve tickets</strong></div></div>
+        <br>
         <div class="row">
             <div class="col-xs-1"><i class="fa fa-calendar" aria-hidden="true"></i></div>
             <div class="col-xs-1"><input type="date" id="startDate"></div>
         </div>
+        <hr>
+        <div class="row"><div class="col-xs-12"><strong>Click on the images to select universe(s) for which to reserve tickets</strong></div></div>
         <br>
-        <div class="row"><div class="col-xs-12">Click on the images to select universe(s) for which to reserve tickets</div></div>
-        
         <div class="row">
             <div class="col-xs-4">
                 <label class="btn">
@@ -75,8 +76,9 @@
                 </label>
             </div>
         </div>
+        <hr>
+        <div class="row"><div class="col-xs-12"><strong>Number of adult and children tickets</strong></div></div>
         <br>
-        <div class="row"><div class="col-xs-12">Number of adult and children tickets</div></div>
         <div class="row">
             <div class="col-xs-1"><label for="adults">Adults</label></div>
             <div class="col-xs-1"><input id="adults" type="number" min=0 ng-model="adults" ng-change="calculateBilletTotal()"></div>
@@ -86,32 +88,37 @@
             <div class="col-xs-1"><label for="children">Children</label></div>
             <div class="col-xs-1"><input id="children" type="number" min=0 ng-model="children" ng-change="calculateBilletTotal()"></div>
         </div>
+        <br>
         <div class="row" ng-show="visibleCost" ng-model="divCost">
             <div class="col-xs-12"><label id="cost">Ticket cost (Rs): {{total}}</label></div>
         </div>
+        <hr>
+        <div class="row"><div class="col-xs-12"><strong>Select the checkbox below if you will stay at AndroidLand hotel</strong></div></div>
         <br>
-        <div class="row"><div class="col-xs-12">Select the checkbox below if you will stay at AndroidLand hotel</div></div>
         <div class="row">
             <div class="col-xs-12">
                 <input type="checkbox" id="sejour" ng-model="sejour" ng-change="showSejourOption()">
                 <label for="sejour">Stay</label>
             </div>            
         </div>
+        <br>
         <div ng-show="visibleNuits">
-            <div class="row"><div class="col-xs-12">Number of nights for stay</div></div>
+            <div class="row"><div class="col-xs-12"><strong>Number of nights for stay</strong></div></div>
+            <br>
             <div class="row">
                 <div class="col-xs-1"><label for="nuits">Nights</label></div>
                 <div class="col-xs-1"><input id="nuits" type="number" ng-model="nuits" ng-change="calculateSejourTotal()"></div>
             </div>
+            <br>
             <div class="row" ng-show="visibleSejourTotal">
                 <div class="col-xs-12"><label id="sejourTotal">Stay cost (Rs): {{sejourTotal}}</label></div>
             </div>
         </div>
-        <br>
+        <hr>
         <div class="row">
             <div class="col-xs-12"><label id="coutTotal">Total cost (Rs): {{total + sejourTotal}}</label></div>
         </div>
-        <br>
+        <hr>
     </div>       
 </div>
 <div class="modal-footer">

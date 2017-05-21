@@ -17,7 +17,8 @@ body.modal-open {
 .modal-content input[type=text],
 .modal-content input[type=tel],
 .modal-content input[type=date],
-.modal-content input[type=number] {
+.modal-content input[type=number],
+.modal-content input[type=email] {
   color: #000;
 }
 

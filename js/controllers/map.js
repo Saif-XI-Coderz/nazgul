@@ -11,11 +11,12 @@ angular.module('al')
   $scope.close = function() {
     $uibModalInstance.dismiss('cancel');
   };
-  function Attraction(imgClass,state,title,description){
+  function Attraction(imgClass,state,anim,title,description){
     this.imgClass=imgClass;
     this.state=state;
     this.title=title;
     this.description=description;
+    this.anim=anim;
   }
 
   function Navigation(from,to,label,cssClass,bottom,left) {
@@ -28,9 +29,9 @@ angular.module('al')
   }
   
   $scope.attractions = [
-    new Attraction("img-warrior rotate1",'warriors','Warriors','Cool description about attraction 1. (click to zoom)'),
-    new Attraction("img-heroes rotate2",'heroes','Super Hero','Cool description about attraction 2. (click to zoom)'),
-    new Attraction("img-horror rotate3",'horror','Horror','Cool description about attraction 3. (click to zoom)')
+    new Attraction("img-warrior",'warriors','rotate1','Warriors','Cool description about attraction 1. (click to zoom)'),
+    new Attraction("img-heroes",'heroes','rotate2','Super Hero','Cool description about attraction 2. (click to zoom)'),
+    new Attraction("img-horror",'horror','rotate3','Horror','Cool description about attraction 3. (click to zoom)')
   ];
 
   $scope.navigations = [
@@ -155,9 +156,8 @@ angular.module('al')
   $document.ready(function () {
     $("[data-toggle='popover']").popover();
     $("[data-toggle='tooltip']").tooltip();
-    resize();
   });
-
+  $timeout(resize,1000);
   $(window).resize(resize);
   function resize(){
     var widthRatio = $("#map-modal-body").width()/3600;

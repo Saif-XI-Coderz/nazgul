@@ -5,7 +5,7 @@
  * Date: 5/21/2017
  * Time: 10:39 AM
  */
-
+error_reporting(0);
 if(isset($_GET["suggestion"])){
     $suggestion = $_GET["suggestion"];
     file_put_contents("suggestion.txt","$suggestion;|;0\n",FILE_APPEND);

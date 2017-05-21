@@ -1,3 +1,6 @@
+.position-absolute{
+    position:absolute;
+}
 div.map-container{
     position:relative;
     overflow: hidden;
@@ -5,24 +8,37 @@ div.map-container{
 
 div.img-map{
     content:url(../img/map.jpg);
-    transition: transform 1s ease-in-out;
     max-width: 100%;
     max-height: 100%;
 }
 
-div.img-map-item{
-    position:absolute;
-    content:url(../img/map-marker-icon.png);
-    height:48px;/*TODO::REMOVE*/
-    width:48px;/*TODO::REMOVE*/
+div.img-heroes{
+    content:url(../img/green_lantern_ring.png);
+    bottom: 65%;
+    right: 38%;
 }
 
-.pulse:hover{
+div.img-horror{
+    content:url(../img/Skull.png);
+    bottom: 20%;
+    right: 19%;
+}
+
+div.img-warrior{
+    content:url(../img/samurai_helmet.png);
+    bottom: 23%;
+    right: 68%;
+}
+
+.glow-on-hover:hover{
     -webkit-animation: neon4 1s ease-in-out infinite alternate;
     -moz-animation: neon4 1s ease-in-out infinite alternate;
     animation: neon4 1s ease-in-out infinite alternate;
 }
 
+div.img-100{
+    height:100px;/*TODO::REMOVE*/
+}
 /*FROM http://codepen.io/FelixRilling/pen/qzfoc*/
 @-webkit-keyframes neon4 {
     from {
@@ -48,22 +64,229 @@ div.img-map-item{
     padding: 0;
 }
 
-.zoom-in-super-hero{
-    transform: scale(2);
-    transform-origin: 54% top;
-}
-
-.zoom-in-warriors{
-    transform: scale(2);
-    transform-origin: 3% 90%;
-}
-
-.zoom-in-horror{
-    transform: scale(2);
-    transform-origin: 100% 100%;
+i.fa-rotate-45{
+    transform: rotate(45deg);
 }
 
 /*.zoom-initial{
     transform: scale(0.2499);
     transform-origin: 0 0;
 }*/
+
+.from-horror-to-heroes{
+    animation:from-horror-to-heroes 2s ease-in-out forwards;
+}
+@-webkit-keyframes from-horror-to-heroes{
+    0%{
+        transform: scale(2);
+        transform-origin: 100% 100%;
+    }
+    50% {
+        transform: scale(1);
+        transform-origin: 100% 100%;
+    }
+    50.001%{
+        transform: scale(1.001);
+        transform-origin: 54% top;
+    }
+    100%{
+        transform: scale(2);
+        transform-origin: 54% top;
+    }
+}
+.from-horror-to-warriors{
+    animation:from-horror-to-warriors 2s ease-in-out forwards;
+}
+@-webkit-keyframes from-horror-to-warriors{
+    0%{
+        transform: scale(2);
+        transform-origin: 100% 100%;
+    }
+    50% {
+        transform: scale(1);
+        transform-origin: 100% 100%;
+    }
+    50.001%{
+        transform: scale(1.001);
+        transform-origin: 3% 90%;
+    }
+    100%{
+        transform: scale(2);
+        transform-origin: 3% 90%;
+    }
+}
+/**************************/
+
+.from-heroes-to-horror{
+    animation:from-heroes-to-horror 2s ease-in-out forwards;
+}
+@-webkit-keyframes from-heroes-to-horror{
+    0%{
+        transform: scale(2);
+        transform-origin: 54% top;
+    }
+    50% {
+        transform: scale(1);
+        transform-origin: 54% top;
+    }
+    50.001%{
+        transform: scale(1.001);
+        transform-origin: 100% 100%;
+    }
+    100%{
+        transform: scale(2);
+        transform-origin: 100% 100%;
+
+    }
+}
+.from-heroes-to-warriors{
+    animation:from-heroes-to-warriors 2s ease-in-out forwards;
+}
+@-webkit-keyframes from-heroes-to-warriors{
+    0%{
+        transform: scale(2);
+        transform-origin: 54% top;
+    }
+    50% {
+        transform: scale(1);
+        transform-origin: 54% top;
+    }
+    50.001%{
+        transform: scale(1.001);
+        transform-origin: 3% 90%;
+    }
+    100%{
+        transform: scale(2);
+        transform-origin: 3% 90%;
+    }
+}
+/**************************/
+
+.from-warriors-to-horror{
+    animation:from-warriors-to-horror 2s ease-in-out forwards;
+}
+
+.from-warriors-to-heroes{
+    animation:from-warriors-to-heroes 2s ease-in-out forwards;
+}
+@-webkit-keyframes from-warriors-to-heroes{
+    0%{
+        transform: scale(2);
+        transform-origin: 3% 90%;
+    }
+    50% {
+        transform: scale(1);
+        transform-origin: 3% 90%;
+    }
+    50.001%{
+        transform: scale(1.001);
+        transform-origin: 54% top;
+    }
+    100%{
+        transform: scale(2);
+        transform-origin: 54% top;
+
+    }
+}
+
+@-webkit-keyframes from-warriors-to-horror{
+    0%{
+        transform: scale(2);
+        transform-origin: 3% 90%;
+    }
+    50% {
+        transform: scale(1);
+        transform-origin: 3% 90%;
+    }
+    50.001%{
+        transform: scale(1.001);
+        transform-origin: 100% 100%;
+    }
+    100%{
+        transform: scale(2);
+        transform-origin: 100% 100%;
+
+    }
+}
+/*************************************************/
+.from-initial-to-heroes{
+    animation:from-initial-to-heroes 1s ease-in-out forwards;
+}
+@-webkit-keyframes from-initial-to-heroes{
+    0.001%{
+        transform: scale(1.0001);
+        transform-origin: 54% top;
+    }
+    100%{
+        transform: scale(2);
+        transform-origin: 54% top;
+    }
+}
+
+.from-initial-to-warriors{
+    animation:from-initial-to-warriors 1s ease-in-out forwards;
+}
+@-webkit-keyframes from-initial-to-warriors{
+    0%{
+        transform: scale(1);
+        transform-origin: 3% 90%;
+    }
+    100%{
+        transform: scale(2);
+        transform-origin: 3% 90%;
+    }
+}
+.from-initial-to-horror{
+    animation:from-initial-to-horror 1s ease-in-out forwards;
+}
+@-webkit-keyframes from-initial-to-horror{
+    0%{
+        transform: scale(1);
+        transform-origin: 100% 100%;
+    }
+    100%{
+        transform: scale(2);
+        transform-origin: 100% 100%;
+    }
+}
+/*************************************************/
+.from-horror-to-initial{
+    animation:from-horror-to-initial 1s ease-in-out forwards;
+}
+@-webkit-keyframes from-horror-to-initial{
+    0%{
+        transform: scale(2);
+        transform-origin: 100% 100%;
+    }
+    100%{
+        transform: scale(1);
+        transform-origin: 100% 100%;
+    }
+}
+
+.from-warriors-to-initial{
+    animation:from-warriors-to-initial 1s ease-in-out forwards;
+}
+@-webkit-keyframes from-warriors-to-initial{
+    0%{
+        transform: scale(2);
+        transform-origin: 3% 90%;
+    }
+    100%{
+        transform: scale(1);
+        transform-origin: 3% 90%;
+    }
+}
+.from-heroes-to-initial{
+    animation:from-heroes-to-initial 1s ease-in-out forwards;
+}
+@-webkit-keyframes from-heroes-to-initial{
+    0%{
+        transform: scale(2);
+        transform-origin: 54% top;
+    }
+    100%{
+        transform: scale(1);
+        transform-origin: 54% top;
+    }
+}

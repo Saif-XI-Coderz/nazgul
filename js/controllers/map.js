@@ -1,37 +1,55 @@
 angular.module('al')
 
 .controller('MapCtrl', function($scope, $uibModalInstance, $document) {
-  $scope.currentState = 'zoom-initial';
+  $scope.currentState = 'initial';
+  $scope.stateClass = 'zoom-initial';
   $scope.close = function() {
     $uibModalInstance.dismiss('cancel');
   };
-  function MapItem(bottom,right,imgClass,onClick,title,description){
-    this.bottom=bottom;
-    this.right=right;
+  function Attraction(imgClass,state,title,description){
     this.imgClass=imgClass;
-    this.onClick=onClick;
+    this.state=state;
     this.title=title;
     this.description=description;
   }
-  $scope.mapItems = [
-    new MapItem('28.5%','70.5%',"img-map-item",'zoomWarriors','Warriors','Cool description about attraction 1. (click to zoom)'),
-    new MapItem('74%','44.5%',"img-map-item",'zoomSuperHero','Super Hero','Cool description about attraction 2. (click to zoom)'),
-    new MapItem('28%','20.5%',"img-map-item",'zoomHorror','Horror','Cool description about attraction 3. (click to zoom)')
+
+  function Navigation(from,to,label,cssClass,bottom,left) {
+    this.from = from;
+    this.to = to;
+    this.label = label;
+    this.cssClass=cssClass;
+    this.bottom=bottom;
+    this.left=left;
+  }
+  
+  $scope.attractions = [
+    new Attraction("img-warrior",'warriors','Warriors','Cool description about attraction 1. (click to zoom)'),
+    new Attraction("img-heroes",'heroes','Super Hero','Cool description about attraction 2. (click to zoom)'),
+    new Attraction("img-horror",'horror','Horror','Cool description about attraction 3. (click to zoom)')
   ];
 
-  $scope.zoomSuperHero = function(){
-    $scope.currentState = 'zoom-in-super-hero';
-  };
+  $scope.navigations = [
+    new Navigation('horror','initial', 'Zoom out', 'fa-arrow-up','92%','50%'),
+    new Navigation('horror','heroes', 'Go to super heroes', 'fa-arrow-left fa-rotate-45','93%','0%'),
+    new Navigation('horror','warriors', 'Go to warriors', 'fa-arrow-left','1%','0.1%'),
 
-  $scope.zoomWarriors = function(){
-    $scope.currentState = 'zoom-in-warriors';
-  };
+    new Navigation('heroes','initial','Zoom out', 'fa-arrow-up','92%','50%'),
+    new Navigation('heroes','horror', 'Go to horror', 'fa-arrow-right fa-rotate-45','0%','96%'),
+    new Navigation('heroes','warriors', 'Go to warriors', 'fa-arrow-down fa-rotate-45','0%','0%'),
 
-  $scope.zoomHorror = function(){
-    $scope.currentState = 'zoom-in-horror';
+    new Navigation('warriors','initial', 'Zoom out', 'fa-arrow-up','92%','50%'),
+    new Navigation('warriors','horror', 'Go to horror', 'fa-arrow-right','0%','96%'),
+    new Navigation('warriors','heroes', 'Go to super heroes', 'fa-arrow-up fa-rotate-45','93%','96%')
+  ];
+
+  $scope.goto = function(from, to){
+    $scope.currentState = to;
+    console.info($scope.stateClass);
+    $scope.stateClass= 'from-'+from+'-to-'+to;
   };
 
   $document.ready(function () {
     $("[data-toggle='popover']").popover();
+    $("[data-toggle='tooltip']").tooltip();
   });
 });

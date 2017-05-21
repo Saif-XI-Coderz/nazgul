@@ -1,0 +1,11 @@
+.opaque {
+    opacity:1;
+}
+
+.opaque-disabled {
+    opacity:0.5;
+}
+
+img {
+    opacity:0.5;
+}

@@ -4,22 +4,27 @@
 <div class="modal-body no-padding" id="map-modal-body">
     <div class="map-container">
         <div class='img-map' ng-class="stateClass"></div>
-        <div class="glow-on-hover img-100 doight position-absolute"
+        <div class="glow-on-hover doight position-absolute"
              ng-repeat="attraction in attractions"
              ng-class='attraction.imgClass'
              ng-click="goto('initial',attraction.state)"
-             ng-show="currentState=='initial'"
+             ng-show="showAttraction">
+        </div>
+        <div class="glow-on-hover doight position-absolute img-map-item pulse"
+             ng-repeat="mapItem in mapItems"
+             ng-show="nav[mapItem.state]"
+             ng-style="{bottom:mapItem.bottom,left:mapItem.left}"
              data-container="body"
              data-toggle="popover"
              data-trigger="hover"
-             data-title="{{attraction.title}}"
-             data-content="{{attraction.description}}">
+             data-title="{{mapItem.title}}"
+             data-content="{{mapItem.description}}">
         </div>
         <i class="doight fa fa-3x position-absolute"
             ng-class="navigation.cssClass"
             ng-repeat="navigation in navigations"
             ng-click="goto(navigation.from,navigation.to)"
-            ng-show="currentState==navigation.from"
+            ng-show="nav[navigation.from]"
             ng-style="{bottom:navigation.bottom,left:navigation.left}"
             data-container="body"
             data-toggle="tooltip"

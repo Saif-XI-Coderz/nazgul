@@ -53,81 +53,80 @@ angular.module('al')
       bottom:'45%',
       left:'30%',
       state:'warriors',
-      title:'Event 1 Title',
-      description:'Event 1 Description'
+      title:'Medieval Japan warriors',
+      description:'Go on an adventure in Medieval Japan as a Samurai'
     },
     {
       bottom:'50%',
       left:'80%',
       state:'warriors',
-      title:'Event 2 Title',
-      description:'Event 2 Description'
+      title:'Pirates of Android Land',
+      description:'Hunt for the treasure of the pirates on Android Land!'
     },
     {
       bottom:'85%',
       left:'40%',
       state:'warriors',
-      title:'Event 3 Title',
-      description:'Event 3 Description'
+      title:'Knights and Dragons',
+      description:'Get under the skin of medieval knights and ride dragons!'
     },
 
     {
       bottom:'75%',
       left:'65%',
       state:'heroes',
-      title:'Event 4 Title',
-      description:'Event 4 Description'
+      title:'Heaven vs. Hell',
+      description:'Be immersed in the chase of demons by demon hunters'
     },
     {
       bottom:'30%',
       left:'20%',
       state:'heroes',
-      title:'Event 5 Title',
-      description:'Event 5 Description'
+      title:'Code AL',
+      description:'Follow secret agents on their adventure of solving crimes on Android Land'
     },
     {
       bottom:'80%',
       left:'5%',
       state:'heroes',
-      title:'Event 6 Title',
-      description:'Event 6 Description'
+      title:'Miniature World',
+      description:'Explore the world from the eyes of ant-size androids'
     },
     {
       bottom:'45%',
       left:'85%',
       state:'heroes',
-      title:'Event 7 Title',
-      description:'Event 7 Description'
+      title:'Meta humans',
+      description:'Experience what it is to be a superhuman'
     },
 
     {
       bottom:'41%',
       left:'89%',
       state:'horror',
-      title:'Event 8 Title',
-      description:'Event 8 Description'
+      title:'Full Moon',
+      description:'Run through the forest to safety from the werewolves'
     },
     {
       bottom:'23%',
       left:'50%',
       state:'horror',
-      title:'Event 9 Title',
-      description:'Event 9 Description'
+      title:'Zombie Apocalypse',
+      description:'You will be chased by a horde of zombies and you will have to survive and kill, or die'
     },
     {
       bottom:'65%',
       left:'75%',
       state:'horror',
-      title:'Event 10 Title',
-      description:'Event 10 Description'
+      title:'Blood Lust',
+      description:'Experience the lifestyle of vampires in the mansions'
     },
     {
       bottom:'80%',
       left:'30%',
       state:'horror',
-      title:'Event 11 Title',
-      description:'Event 11 Description',
-      description:'Event 11 Description'
+      title:'Evil Spirit',
+      description:'Get the scare of your life in the rollercoaster'
     }
   ];
   $scope.goto = function(from, to){

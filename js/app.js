@@ -57,14 +57,24 @@ angular.module('al', ['ngAnimate', 'ngSanitize', 'ui.bootstrap'])
   var mashup = {}
 
   mashup.state = 'collapsed';
+  mashup.music = 'music/homepage.mp3';
 
   mashup.focusSection = function(sectionNumber) {
     mashup.state = 'expanded-' + sectionNumber;
+
+    if (sectionNumber == 1)
+      mashup.music = 'music/horror.mp3';
+    else if (sectionNumber == 2)
+      mashup.music = 'music/heroes.mp3';
+    else
+      mashup.music = 'music/warriors.mp3';
   }
 
   mashup.focusNone = function(e) {
     e.stopPropagation();
+
     mashup.state = 'collapsed';
+    mashup.music = '';
   }
 
   $scope.order = order;
@@ -72,8 +82,4 @@ angular.module('al', ['ngAnimate', 'ngSanitize', 'ui.bootstrap'])
   $scope.contact = contact;
   $scope.about = about;
   $scope.mashup = mashup;
-})
-
-.run(function() {
-	console.log('hello world');
 })

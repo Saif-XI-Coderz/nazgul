@@ -37,6 +37,37 @@
   transition: transform 1s;
 }
 
+.mashup .mashup-item-title {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  right: 0;
+  width: 40%;
+  margin: auto;
+  transition: transform 1s, opacity 1s, width 1s;
+  transform-origin: top center;
+  opacity: 0;
+}
+
+.mashup.mashup-collapsed .mashup-item-title {
+  opacity: 1;
+}
+
+.mashup.mashup-expanded-1 .mashup-item-title,
+.mashup.mashup-expanded-2 .mashup-item-title,
+.mashup.mashup-expanded-3 .mashup-item-title {
+  opacity: 0;
+  width: 20%;
+}
+
+.mashup-collapsed .mashup-section:hover .mashup-item-title {
+  transform: scale(1.1);
+}
+
+.mashup .mashup-item-title img {
+  width: 100%;
+}
+
 .mashup.mashup-collapsed .mashup-back {
   display: none;
 }
@@ -206,7 +237,7 @@
 
 .mt-horror .mt-zombie2 {
   bottom: 0%;
-  right: 22%;
+  right: 12%;
   width: 32%;
 }
 
@@ -221,7 +252,7 @@
 }
 
 .mashup-expanded-1 .mt-horror .mt-zombie2 {
-
+  right: 22%;
 }
 
 .mashup-expanded-1 .mt-horror .mt-daedric {

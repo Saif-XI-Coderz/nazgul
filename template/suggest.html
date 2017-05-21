@@ -1,0 +1,45 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="contact-modal-title">Suggest</h3>
+</div>
+<div class="modal-body" id="suggest-modal-body" style="color: black;">
+    <div class="container-fluid">
+        <div class="row-fluid" style="margin-bottom: 50px;">
+           <div class="col-md-12">
+               <div class="input-group">
+                   <input type="text" class="form-control" placeholder="Your Suggestion..." ng-model="suggestion">
+                  <span class="input-group-btn">
+                    <button class="btn btn-success" type="button" ng-click="saveSuggestion()" ng-disabled="!suggestion">Suggest</button>
+                  </span>
+               </div>
+           </div>
+        </div>
+        <div class="row-fluid">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Registered Suggestions</div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Suggestion</th>
+                                <th>Votes</th>
+                                <th>Like</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="suggested in listSuggestions">
+                                <th scope="row">{{$index+1}}</th>
+                                <td>{{suggested.suggestion}}</td>
+                                <td>{{suggested.vote}}</td>
+                                <td><button class="btn-xs btn btn-info"><i class="glyphicon glyphicon-thumbs-up" ng-click="like(suggested.suggestion)"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="close()">Close</button>
+</div>

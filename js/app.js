@@ -27,6 +27,19 @@ angular.module('al', ['ngAnimate', 'ngSanitize', 'ui.bootstrap'])
     })
   }
 
+  /* Suggest modal */
+  var suggest = {}
+
+  suggest.open = function() {
+    suggest.instance = $uibModal.open({
+      ariaLabelledBy: 'map-modal-title',
+      ariaDescribedBy: 'map-modal-body',
+      templateUrl: 'template/suggest.html',
+      controller: 'SuggestCtrl',
+      size: 'lg'
+    })
+  }
+  
   /* Contact modal */
   var contact = {}
 
@@ -79,6 +92,7 @@ angular.module('al', ['ngAnimate', 'ngSanitize', 'ui.bootstrap'])
 
   $scope.order = order;
   $scope.map = map;
+  $scope.suggest = suggest;
   $scope.contact = contact;
   $scope.about = about;
   $scope.mashup = mashup;

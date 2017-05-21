@@ -1,8 +1,125 @@
 <div class="modal-header">
   <h3 class="modal-title" id="order-modal-title">Order</h3>
 </div>
-<div class="modal-body" id="order-modal-body">
-  Hello world!
+<div class="modal-body order-modal" id="order-modal-body">
+  
+    <div class="container-fluid">
+        
+        <div class="row">
+            <div class="col-xs-1"><label for="name">Name</label></div>
+            <div class="col-xs-1"><input id="name" type="text"></div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-1"><label for="tel">Phone</label></div>
+            <div class="col-xs-1"><input id="tel" type="tel"></div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-1"><label for="mail">E-mail</label></div>
+            <div class="col-xs-1"><input id="mail" type="mail"></div>
+        </div>
+        <br> 
+        <div class="row"><div class="col-xs-12">Date for which to reserve tickets</div></div>
+        <div class="row">
+            <div class="col-xs-1"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+            <div class="col-xs-1"><input type="date" id="startDate"></div>
+        </div>
+        <br>
+        <div class="row"><div class="col-xs-12">Click on the images to select universe(s) for which to reserve tickets</div></div>
+        
+        <div class="row">
+            <div class="col-xs-12">
+                <label class="btn">
+                    <img src="https://drive.google.com/uc?id=0B3EQOZZuLC1jWlZuVnRBRDh0a3M"
+                         alt="..."
+                         class="img-thumbnail img-check"
+                         ng-class="{'opaque': uni1, 'opaque-disabled': !uni1}"
+                         width="200">
+                    <input type="checkbox" 
+                           id="uni1" 
+                           name="uni1"  
+                           class="hidden" 
+                           ng-model="uni1"  
+                           ng-change="calculateBilletTotal()">
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <label class="btn">
+                    <img src="https://drive.google.com/uc?id=0B3EQOZZuLC1jbXZtVzd0QVdWTU0" 
+                         alt="..." 
+                         class="img-thumbnail img-check"
+                         ng-class="{'opaque': uni2, 'opaque-disabled': !uni2}"
+                         width="200">
+                    <input type="checkbox" 
+                           id="uni2" 
+                           name="uni2" 
+                           class="hidden" 
+                           ng-model="uni2" 
+                           ng-change="calculateBilletTotal()">
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <label class="btn">
+                    <img src="https://drive.google.com/uc?id=0B3EQOZZuLC1jc2VqV05OUXJIY0U" 
+                         alt="..." 
+                         class="img-thumbnail img-check"
+                         ng-class="{'opaque': uni3, 'opaque-disabled': !uni3}"
+                         width="200">
+                    <input type="checkbox" 
+                           id="uni3"
+                           name="uni3"
+                           class="hidden" 
+                           ng-model="uni3"  
+                           ng-change="calculateBilletTotal()">
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="row"><div class="col-xs-12">Number of adult and children tickets</div></div>
+        <div class="row">
+            <div class="col-xs-1"><label for="adults">Adults</label></div>
+            <div class="col-xs-1"><input id="adults" type="number" min=0 ng-model="adults" ng-change="calculateBilletTotal()"></div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-1"><label for="children">Children</label></div>
+            <div class="col-xs-1"><input id="children" type="number" min=0 ng-model="children" ng-change="calculateBilletTotal()"></div>
+        </div>
+        <div class="row" ng-show="visibleCost" ng-model="divCost">
+            <div class="col-xs-12"><label id="cost">Ticket cost (Rs): {{total}}</label></div>
+        </div>
+        <br>
+        <div class="row"><div class="col-xs-12">Select the checkbox below if you will stay at AndroidLand hotel</div></div>
+        <div class="row">
+            <div class="col-xs-12">
+                <input type="checkbox" id="sejour" ng-model="sejour" ng-change="showSejourOption()">
+                <label for="sejour">Stay</label>
+            </div>            
+        </div>
+        <div ng-show="visibleNuits">
+            <div class="row"><div class="col-xs-12">Number of nights for stay</div></div>
+            <div class="row">
+                <div class="col-xs-1"><label for="nuits">Nights</label></div>
+                <div class="col-xs-1"><input id="nuits" type="number" ng-model="nuits" ng-change="calculateSejourTotal()"></div>
+            </div>
+            <div class="row" ng-show="visibleSejourTotal">
+                <div class="col-xs-12"><label id="sejourTotal">Stay cost (Rs): {{sejourTotal}}</label></div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-12"><label id="coutTotal">Total cost (Rs): {{total + sejourTotal}}</label></div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-12"><input id="nuits" class="btn btn-primary" type="submit" value="Confirm" ng-click="submitForm()"></div>
+        </div>
+    </div>       
 </div>
 <div class="modal-footer">
   <button class="btn btn-primary" type="button" ng-click="close()">Close</button>

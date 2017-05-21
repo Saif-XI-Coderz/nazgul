@@ -27,6 +27,32 @@ angular.module('al', ['ngAnimate', 'ngSanitize', 'ui.bootstrap'])
     })
   }
 
+  /* Contact modal */
+  var contact = {}
+
+  contact.open = function() {
+    map.instance = $uibModal.open({
+      ariaLabelledBy: 'contact-modal-title',
+      ariaDescribedBy: 'contact-modal-body',
+      templateUrl: 'template/contact.html',
+      controller: 'ContactCtrl',
+      size: 'lg'
+    })
+  }
+
+  /* About modal */
+  var about = {}
+
+  about.open = function() {
+    map.instance = $uibModal.open({
+      ariaLabelledBy: 'about-modal-title',
+      ariaDescribedBy: 'about-modal-body',
+      templateUrl: 'template/about.html',
+      controller: 'AboutCtrl',
+      size: 'lg'
+    })
+  }
+
   /* Mashup */
   var mashup = {}
 
@@ -43,6 +69,8 @@ angular.module('al', ['ngAnimate', 'ngSanitize', 'ui.bootstrap'])
 
   $scope.order = order;
   $scope.map = map;
+  $scope.contact = contact;
+  $scope.about = about;
   $scope.mashup = mashup;
 })
 

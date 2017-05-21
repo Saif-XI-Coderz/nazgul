@@ -1,0 +1,11 @@
+.order-modal .opaque {
+    opacity:1;
+}
+
+.order-modal .opaque-disabled {
+    opacity:0.5;
+}
+
+.order-modal img {
+    opacity:0.5;
+}

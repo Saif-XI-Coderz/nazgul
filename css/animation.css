@@ -1,0 +1,54 @@
+/* 1-6:; on, 15-20: on, 50-55: on, 100: on*/
+
+@keyframes blinkIn {
+    0% { opacity: 0; }
+    1% { opacity: 1; }
+
+    5% { opacity: 1; }
+    6% { opacity: 0; }
+
+    /* --- */
+
+    14% { opacity: 0; }
+    15% { opacity: 1; }
+
+    19% { opacity: 1; }
+    20% { opacity: 0; }
+
+    /* --- */
+
+    49% { opacity: 0; }
+    50% { opacity: 1; }
+
+    54% { opacity: 1; }
+    55% { opacity: 0; }
+
+    /* --- */
+
+    99% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp80 {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 0.8;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown80 {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 0.8;
+    transform: none;
+  }
+}

@@ -1,3 +1,34 @@
+.navbar .logo img {
+  width: 500px;
+}
+
+.navbar ul,
+.navbar li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar .menu {
+  float: right;
+  margin-top: 153px;
+}
+
+.navbar .menu li {
+  display: inline-block;
+  margin-right: 16px;
+  margin-left: 0;
+  cursor: pointer;
+  transition: transform 0.2s, margin-left 0.2s, margin-right 0.2s;
+  transform-origin: bottom center;
+}
+
+.navbar .menu li:hover {
+  transform: translateY(-4px);
+/*  margin-right: 32px;
+  margin-left: 16px;*/
+}
+
 .mashup {
   position: relative;
   white-space: nowrap;
@@ -15,6 +46,13 @@
   top: 0;
   right: 0;
   z-index: 10;
+  width: 36px;
+  margin: 12px;
+  opacity: 0.8;
+}
+
+.mashup .mashup-back img {
+  width: 100%;
 }
 
 .mashup.mashup-expanded-1,
@@ -48,6 +86,7 @@
   width: 100%;
   opacity: 0;
   transition: opacity 1s;
+  cursor: pointer;
 }
 
 .mashup .mashup-section:before {
@@ -58,11 +97,15 @@
 }
 
 .mashup.mashup-collapsed .mashup-section:before {
-  padding-top: 125%;
+  padding-top: 155%;
 }
 
 .mashup.mashup-collapsed .mashup-section {
   opacity: 1;
+}
+
+.mashup.mashup-collapsed .mashup-section:hover .mashup-item {
+  transform: scale(1.1);
 }
 
 .mashup.mashup-expanded-1 .mashup-section:nth-child(1),
@@ -74,7 +117,8 @@
 .mashup .mashup-item {
   position: absolute;
   opacity: 0;
-  transition: opacity 1s, width 1s, left 1s, right 1s;
+  transition: opacity 1s, width 1s, left 1s, right 1s, transform 1s;
+  transform-origin: bottom center;
 }
 
 .mashup .mashup-item.mashup-item-main {
@@ -94,13 +138,25 @@
 .mashup .mashup-item label {
   display: none;
   position: absolute;
-  top: 100%;
+  bottom: 100%;
   left: 0;
   right: 0;
-  width: 200px;
+  width: 300px;
   margin: auto;
-  animation: fadeInUp 0.5s;
-  border: 1px dotted #FFF;
+  animation: fadeInDown80 0.75s;
+  background: #000;
+  padding: 8px 12px;
+  opacity: 0.8;
+}
+
+.mashup .mashup-item label:after {
+  content: '';
+  width: 20px;
+  height: 15px;
+  background-image: url(../img/arrow_down.png);
+  position: absolute;
+  top: 100%;
+  left: calc(50% - 10px);
 }
 
 .mashup .mashup-item:hover label {
@@ -125,13 +181,13 @@
 .mt-horror .mt-werewolf {
   bottom: 20%;
   left: 0;
-  width: 70%;
+  width: 69%;
 }
 
 .mt-horror .mt-zombie {
   bottom: 0%;
   left: 0;
-  width: 70%;
+  width: 72%;
 }
 
 .mashup-expanded-1 .mt-horror .mt-werewolf {
@@ -186,13 +242,13 @@
 .mt-superhero .mt-herogirl {
   bottom: 0%;
   left: -15%;
-  width: 60%;
+  width: 65%;
 }
 
 .mt-superhero .mt-heroguy {
   bottom: 0%;
   left: 18%;
-  width: 75%;
+  width: 79%;
 }
 
 .mashup-expanded-2 .mt-superhero .mt-herogirl {
@@ -238,7 +294,7 @@
 .mt-warrior .mt-knight {
   bottom: 0;
   right: 0;
-  width: 70%;
+  width: 80%;
 }
 
 .mashup-expanded-3 .mt-warrior .mt-samurai {
@@ -277,4 +333,83 @@
 
 .mashup-expanded-3 .mt-warrior .mt-viking {
   left: 48%;
+}
+
+.book-now-section {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.book-now-section img {
+
+}
+
+.bottom-guard {
+  height: 100px;
+}
+
+/*
+ * Horror label positions
+ */
+
+.mashup-item.mt-zombie label {
+  margin: 0;
+  left: calc(67% - 150px);
+  bottom: 79%;
+}
+
+.mashup-item.mt-vampire label {
+  margin: 0;
+  left: calc(36% - 150px);
+  bottom: 90%;
+}
+
+.mashup-item.mt-daedric label {
+  margin: 0;
+  left: calc(68% - 150px);
+  bottom: 92%;
+}
+
+/*
+ * Superhero label positions
+ */
+
+.mashup-item.mt-akasha label {
+  margin: 0;
+  left: calc(53% - 150px);
+  bottom: 94%;
+}
+
+.mashup-item.mt-herogirl label {
+  margin: 0;
+  left: calc(41% - 150px);
+  bottom: 103%;
+}
+
+.mashup-item.mt-heroguy label {
+  margin: 0;
+  left: calc(55% - 150px);
+  bottom: 89%;
+}
+
+/*
+ * Warrior label positions
+ */
+
+.mashup-item.mt-samurai label {
+  margin: 0;
+  left: calc(42% - 150px);
+  bottom: 82%;
+}
+
+.mashup-item.mt-pirate label {
+  margin: 0;
+  left: calc(59% - 150px);
+  bottom: 102%;
+}
+
+.mashup-item.mt-knight label {
+  margin: 0;
+  left: calc(71% - 150px);
+  bottom: 101%;
 }

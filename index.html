@@ -28,10 +28,20 @@
     <script src="js/controllers/map.js"></script>
   </head>
   <body ng-app="al" ng-controller="MainCtrl">
-    <button ng-click="order.open()">Order</button>
-    <button ng-click="map.open()">Awesome button</button>
-
     <div id="wrapper">
+      <div class="navbar">
+        <ul class="menu">
+          <li>Home</li>
+          <li ng-click="order.open()">Place Order</li>
+          <li ng-click="map.open()">View Map</li>
+          <li>Contact Us</li>
+          <li>About Us</li>
+        </ul>
+        <div class="logo">
+          <img src="img/logo.png">
+        </div>
+      </div>
+
       <div class="mashup mashup-{{ mashup.state }}">
         <ul class="mashup-section mt-horror" ng-click="mashup.focusSection(1)">
           <li class="mashup-item mashup-item-main mt-werewolf">
@@ -54,7 +64,9 @@
             <img src="img/items/horror/vampire.png" />
             <label>A vampire</label>
           </li>
-          <li class="mashup-back" ng-click="mashup.focusNone($event)">Back</li>
+          <li class="mashup-back" ng-click="mashup.focusNone($event)">
+            <img src="img/close.png">
+          </li>
         </ul><!-- 
         --><ul class="mashup-section mt-superhero" ng-click="mashup.focusSection(2)">
           <li class="mashup-item mt-akasha">
@@ -73,7 +85,9 @@
             <img src="img/characters/hero-girl.png" />
             <label>A girl</label>
           </li>
-          <li class="mashup-back" ng-click="mashup.focusNone($event)">Back</li>
+          <li class="mashup-back" ng-click="mashup.focusNone($event)">
+            <img src="img/close.png">
+          </li>
         </ul><!-- 
         --><ul class="mashup-section mt-warrior" ng-click="mashup.focusSection(3)">
           <li class="mashup-item mashup-item-main mt-knight">
@@ -96,9 +110,17 @@
             <img src="img/items/warriors/pirate.png" />
             <label>A pirate</label>
           </li>
-          <li class="mashup-back" ng-click="mashup.focusNone($event)">Back</li>
+          <li class="mashup-back" ng-click="mashup.focusNone($event)">
+            <img src="img/close.png">
+          </li>
         </ul>
       </div>
+
+      <div class="book-now-section">
+        <img src="img/book-now-3.png">
+      </div>
     </div>
+
+    <div class="bottom-guard"></div>
   </body>
 </html>

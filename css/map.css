@@ -83,7 +83,9 @@ div.img-100{
 i.fa-rotate-45{
     transform: rotate(45deg);
 }
-
+i.color-darkviolet{
+    color: darkviolet;
+}
 /*.zoom-initial{
     transform: scale(0.2499);
     transform-origin: 0 0;
@@ -317,4 +319,13 @@ i.fa-rotate-45{
     from {filter: drop-shadow(0 0 1px #E4C89C) drop-shadow(0 0 2px #E4C89C); }
     50% {filter: drop-shadow(0 0 2px #EAF760) drop-shadow(0 0 3px #EAF760) drop-shadow(0 0 4px #EAF760); }
     to {filter: drop-shadow(0 0 1px #E4C89C) drop-shadow(0 0 2px #E4C89C); }
+}
+
+.popover{
+    background: rgba(14, 37, 68, 0.8)!important;
+    opacity: 0.8!important;
+}
+.popover>.popover-title{
+    background: rgba(14, 37, 68, 0.7)!important;
+    opacity: 0.7!important;
 }

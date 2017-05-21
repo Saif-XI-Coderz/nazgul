@@ -1,7 +1,7 @@
 <div class="modal-header">
   <h3 class="modal-title" id="map-modal-title">Map (Hover on map and click)</h3>
 </div>
-<div class="modal-body no-padding" id="map-modal-body">
+<div class="modal-body no-padding" id="map-modal-body" style="">
     <div class="map-container">
         <div class='img-map' ng-class="stateClass"></div>
         <div class="glow-on-hover doight position-absolute"
@@ -21,11 +21,11 @@
              ng-style="{bottom:mapItem.bottom,left:mapItem.left}"
              data-container="body"
              data-toggle="popover"
-             data-trigger="hover"
+             data-trigger="click"
              data-title="{{mapItem.title}}"
              data-content="{{mapItem.description}}">
         </div>
-        <i class="doight fa fa-3x position-absolute"
+        <i class="doight fa fa-3x position-absolute color-darkviolet"
             ng-class="navigation.cssClass"
             ng-repeat="navigation in navigations"
             ng-click="goto(navigation.from,navigation.to)"

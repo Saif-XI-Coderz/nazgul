@@ -59,7 +59,7 @@ angular.module('al')
   }
   
   $scope.submitForm = function() {
-      alert("Votre réservation est confirmée. Veuillez consulter votre mail pour les détails.");
+      alert("Your reservation is confirmed. Please check your e-mail for more details.");
       $scope.close();
   }
 

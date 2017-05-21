@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title>AndroidLand</title>
+    <title>Android Land</title>
 
     <link rel="stylesheet" type="text/css" href="lib/animate.css/animate.min.css">
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css">
@@ -31,15 +31,15 @@
     <script src="js/controllers/contact.js"></script>
     <script src="js/controllers/about.js"></script>
   </head>
-  <body ng-app="al" ng-controller="MainCtrl">
+  <body ng-app="al" ng-controller="MainCtrl" style="font-family: Helvetica">
     <div id="wrapper">
       <div class="navbar">
-        <ul class="menu">
-          <li>Home</li>
-          <li ng-click="order.open()">Place Order</li>
-          <li ng-click="map.open()">View Map</li>
-          <li ng-click="contact.open()">Contact Us</li>
-          <li ng-click="about.open()">About Us</li>
+        <ul class="menu" style="font-family: Impact; font-size: 18px">
+          <li><a href="index.html">Home</li></a>
+          <li ng-click="order.open()">Booking</li>
+          <li ng-click="map.open()">Map</li>
+          <li ng-click="contact.open()">Contact</li>
+          <li ng-click="about.open()">About</li>
         </ul>
         <div class="logo">
           <img src="img/logo.png">
@@ -50,11 +50,11 @@
         <ul class="mashup-section mt-horror" ng-click="mashup.focusSection(1)">
           <li class="mashup-item mashup-item-main mt-werewolf">
             <img src="img/characters/werewolf.png" />
-            <label>A bear</label>
+            <label>The Wolf Man, terrifying humans at<br>midnight's full moon</label>
           </li>
           <li class="mashup-item mashup-item-main mt-zombie">
             <img src="img/characters/zombie.png" />
-            <label>A zombie</label>
+            <label>The Undead, hungry for all your body<br>organs</label>
           </li>
           <li class="mashup-item mt-zombie2">
             <img src="img/items/horror/zombie2.png" />
@@ -62,11 +62,11 @@
           </li>
           <li class="mashup-item mt-daedric">
             <img src="img/items/horror/daedric.png" />
-            <label>A daedric</label>
+            <label>The Armoured Beast, feeding on human<br>souls</label>
           </li>
           <li class="mashup-item mt-vampire">
             <img src="img/items/horror/vampire.png" />
-            <label>A vampire</label>
+            <label>Dracula, set on a never-ending blood-lust</label>
           </li>
           <li class="mashup-back" ng-click="mashup.focusNone($event)">
             <img src="img/close.png">
@@ -78,19 +78,19 @@
         --><ul class="mashup-section mt-superhero" ng-click="mashup.focusSection(2)">
           <li class="mashup-item mt-akasha">
             <img src="img/items/heroes/akasha.png" />
-            <label>Akasha</label>
+            <label>The Demon Hunter, killing all evil on<br>her way</label>
           </li>
           <li class="mashup-item mt-deadpool">
             <img src="img/items/heroes/deadpool.png" />
-            <label>Deadpool</label>
+            <label>Yellow Jacket, the most humorous<br>superhuman</label>
           </li>
           <li class="mashup-item mashup-item-main mt-heroguy">
             <img src="img/characters/hero-guy.png" />
-            <label>A guy</label>
+            <label>The Miniature Man, capable of shrinking<br>to the size of ants</label>
           </li>
           <li class="mashup-item mashup-item-main mt-herogirl">
             <img src="img/characters/hero-girl.png" />
-            <label>A girl</label>
+            <label>The Secret Agent, fighting crime at<br>every corner</label>
           </li>
           <li class="mashup-back" ng-click="mashup.focusNone($event)">
             <img src="img/close.png">
@@ -102,11 +102,11 @@
         --><ul class="mashup-section mt-warrior" ng-click="mashup.focusSection(3)">
           <li class="mashup-item mashup-item-main mt-knight">
             <img src="img/characters/knight.png" />
-            <label>A knight</label>
+            <label>The Knight, the most loyal warrior of all times</label>
           </li>
           <li class="mashup-item mashup-item-main mt-samurai">
             <img src="img/characters/samurai.png" />
-            <label>A samurai</label>
+            <label>The Samurai, noble fighter who does not<br>hesitate in the face of Death</label>
           </li>
           <li class="mashup-item mt-greek">
             <img src="img/items/warriors/greek.png" />
@@ -114,11 +114,11 @@
           </li>
           <li class="mashup-item mt-viking">
             <img src="img/items/warriors/viking.png" />
-            <label>A viking</label>
+            <label>The Viking, the most feared warrior across Europe</label>
           </li>
           <li class="mashup-item mt-pirate">
             <img src="img/items/warriors/pirate.png" />
-            <label>A pirate</label>
+            <label>The Pirate, ready to kill for treasure</label>
           </li>
           <li class="mashup-back" ng-click="mashup.focusNone($event)">
             <img src="img/close.png">
